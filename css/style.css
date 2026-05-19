@@ -1,0 +1,491 @@
+/* =========================================
+   БАЗОВІ НАЛАШТУВАННЯ
+========================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Кастомізація скроллбару */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f0c29;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e74c3c;
+    border-radius: 5px;
+}
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    color: #ffffff;
+    background: #0f0c29;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* =========================================
+   ШАПКА ТА НАВІГАЦІЯ
+========================================= */
+
+header {
+    background: rgba(15, 12, 41, 0.95);
+    backdrop-filter: blur(15px);
+    padding: 15px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2000;
+    border-bottom: 2px solid #e74c3c;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e74c3c;
+}
+
+.burger {
+    cursor: pointer;
+    z-index: 3000;
+    padding: 10px;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 6px 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* =========================================
+   OVERLAY MENU
+========================================= */
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    width: 100%;
+    height: 100vh;
+    background: #0f0c29;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    z-index: 2500;
+}
+
+.nav-overlay.active {
+    transform: translateX(0);
+}
+
+.nav-overlay a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-overlay a:hover {
+    color: #e74c3c;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 100svh;
+    background:
+        linear-gradient(rgba(15, 12, 41, 0.6), rgba(15, 12, 41, 0.9)),
+        url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(3rem, 10vw, 6rem);
+    margin: 0;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 20px 0 40px;
+    color: #ccc;
+}
+
+.accent-text {
+    color: #e74c3c;
+}
+
+/* =========================================
+   СЕКЦІЇ
+========================================= */
+
+.section {
+    padding: 100px 0;
+}
+
+.section-dark-bg {
+    background: #0d0a24;
+}
+
+.section-darker-bg {
+    background: #0a081f;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+h2 span {
+    color: #e74c3c;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* =========================================
+   КАРТКИ
+========================================= */
+
+.card {
+    background: #161432;
+    padding: 30px;
+    border-radius: 20px;
+    border-left: 5px solid #e74c3c;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.2);
+}
+
+.card h3 {
+    font-family: 'Oswald', sans-serif;
+    color: #e74c3c;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+.card-yellow {
+    border-left-color: #f1c40f;
+}
+
+/* =========================================
+   МОТОЦИКЛИ
+========================================= */
+
+.bike-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bike-tag {
+    font-size: 0.7rem;
+    background: #e74c3c;
+    padding: 3px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* =========================================
+   ЛОКАЦІЇ
+========================================= */
+
+.location-box {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    padding: 50px;
+    border-radius: 30px;
+    border: 1px solid #e74c3c;
+}
+
+.location-title {
+    color: #e74c3c;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+/* =========================================
+   CHECKLIST
+========================================= */
+
+.check-box {
+    background: #fff;
+    color: #000;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.check-item input {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+/* Поддержка accent-color */
+@supports (accent-color: #e74c3c) {
+    .check-item input {
+        accent-color: #e74c3c;
+    }
+}
+
+/* =========================================
+   CTA ФОРМА
+========================================= */
+
+.cta-box {
+    background: #e74c3c;
+    padding: 60px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+}
+
+.cta-box h2 {
+    margin-bottom: 20px;
+}
+
+.cta-accent {
+    color: #0f0c29;
+}
+
+.cta-box input {
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    margin: 10px;
+    width: 250px;
+    outline: none;
+    font-family: inherit;
+}
+
+/* =========================================
+   КНОПКИ
+========================================= */
+
+.btn {
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.btn-main {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn-main:hover {
+    background: #ff4757;
+    transform: scale(1.05);
+}
+
+.btn-dark {
+    background: #0f0c29;
+    color: #fff;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.btn:focus,
+.nav-overlay a:focus,
+input:focus {
+    outline: 2px solid #f1c40f;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background: #050510;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.btn-up {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #e74c3c;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    z-index: 1000;
+    font-weight: bold;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.btn-up:hover {
+    transform: scale(1.2);
+}
+
+/* =========================================
+   АДАПТИВНІСТЬ
+========================================= */
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .cta-box {
+        padding: 40px 20px;
+    }
+
+    .cta-box input {
+        width: 85%;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .location-box {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-overlay a {
+        font-size: 1.2rem;
+    }
+}

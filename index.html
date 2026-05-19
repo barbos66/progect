@@ -3,282 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enduro Drive | Full Professional Guide</title>
-    <style>
-        html { scroll-behavior: smooth; }
-        
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: #0f0c29; }
-        ::-webkit-scrollbar-thumb { background: #e74c3c; border-radius: 5px; }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            margin: 0;
-            color: #ffffff;
-            background: #0f0c29;
-            overflow-x: hidden;
-        }
-
-        header {
-            background: rgba(15, 12, 41, 0.95);
-            backdrop-filter: blur(15px);
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 2000;
-            border-bottom: 2px solid #e74c3c;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
-        }
-
-        .logo { font-size: 1.8rem; font-weight: 900; color: #fff; text-decoration: none; letter-spacing: 2px; }
-        .logo span { color: #e74c3c; }
-
-        .burger { cursor: pointer; z-index: 3000; padding: 10px; }
-        .burger div { width: 30px; height: 3px; background: #fff; margin: 6px 0; transition: 0.4s; }
-
-        .nav-overlay {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(15, 12, 41, 0.98);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: 0.5s cubic-bezier(0.7, 0, 0.3, 1);
-            z-index: 2500;
-        }
-        .nav-overlay.active { right: 0; }
-        .nav-overlay a {
-            font-size: 2rem;
-            color: #fff;
-            text-decoration: none;
-            margin: 15px 0;
-            font-weight: 900;
-            text-transform: uppercase;
-        }
-
-        .page-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 100px 20px;
-            box-sizing: border-box;
-        }
-
-        .container { max-width: 1100px; margin: auto; width: 100%; }
-
-        h2 { font-size: 3rem; text-transform: uppercase; margin-bottom: 50px; }
-        h2 span { color: #e74c3c; }
-
-        /* ТЕХНІКА ЇЗДИ */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        .skill-card {
-            background: #161432;
-            padding: 30px;
-            border-radius: 20px;
-            border-left: 5px solid #e74c3c;
-        }
-        .skill-card h3 { color: #e74c3c; margin-top: 0; }
-
-        /* ЕКІПІРУВАННЯ */
-        .gear-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .gear-item {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 25px;
-            border-radius: 20px;
-        }
-        .gear-item h3 { color: #f1c40f; margin-top: 0; }
-
-        /* ЛОКАЦІЯ */
-        .location-card {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            padding: 50px;
-            border-radius: 30px;
-        }
-
-        /* ЧЕК-ЛИСТ (ПОКРАЩЕНИЙ) */
-        .check-box {
-            background: #fff;
-            color: #000;
-            padding: 40px;
-            border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
-        .check-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-        .check-item input { width: 25px; height: 25px; accent-color: #e74c3c; }
-
-        .btn-up { position: fixed; bottom: 30px; right: 30px; background: #e74c3c; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-decoration: none; z-index: 1000; }
-
-        @media (max-width: 768px) { h2 { font-size: 2rem; } }
-    </style>
+    <title>Enduro Drive | Master the Terrain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
     <header>
         <nav>
-            <a href="#home" class="logo">ENDURO<span>PRO</span></a>
+            <a href="#" class="logo">ENDURO<span>PRO</span></a>
             <div class="burger" onclick="toggleMenu()">
-                <div id="b1"></div><div id="b2"></div><div id="b3"></div>
+                <div id="b1"></div>
+                <div id="b2"></div>
+                <div id="b3"></div>
             </div>
         </nav>
     </header>
-
-    <div class="nav-overlay" id="navMenu">
+    <aside class="nav-overlay" id="navMenu">
         <a href="#home" onclick="toggleMenu()">Головна</a>
         <a href="#skills" onclick="toggleMenu()">Техніка їзди</a>
         <a href="#gear" onclick="toggleMenu()">Екіпірування</a>
-        <a href="#locations" onclick="toggleMenu()">Ялинка / Рожівка</a>
+        <a href="#locations" onclick="toggleMenu()">Локації</a>
         <a href="#bikes" onclick="toggleMenu()">Мотоцикли</a>
         <a href="#check" onclick="toggleMenu()">Чек-лист</a>
-    </div>
-
-    <!-- 1. ГОЛОВНА -->
-    <section class="page-section" id="home" style="background: radial-gradient(circle, #302b63, #0f0c29); text-align: center;">
-        <div class="container">
-            <h1 style="font-size: 4.5rem; margin: 0; text-transform: uppercase;">Ride or <span style="color:#e74c3c">Die</span></h1>
-            <p style="font-size: 1.5rem; opacity: 0.7;">Техніка, екіп та кращі локації України</p>
-        </div>
-    </section>
-
-    <!-- 2. ТЕХНІКА ЇЗДИ (НОВЕ!) -->
-    <section class="page-section" id="skills">
-        <div class="container">
-            <h2><span>01.</span> Техніка їзди</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Атакуюча стійка</h3>
-                    <p>Тіло зміщене вперед, лікті розведені вгору («крила»). Це дає максимальний контроль над переднім колесом.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Робота з балансом</h3>
-                    <p>Стискай мотоцикл колінами. Руки мають бути розслабленими — вони лише для керування, а не для того, щоб триматися за байк.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Подолання колод</h3>
-                    <p>Стиснення підвіски перед перешкодою, різкий газ і зміщення ваги назад, щоб "перекинути" переднє колесо.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Гальмування</h3>
-                    <p>Використовуй переднє гальмо на 70%. Заднє — для стабілізації або "закидання" хвоста в повороті.</p>
+        <a href="#join" onclick="toggleMenu()">Банда</a>
+    </aside>
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Ride or <span class="accent-text">Die</span></h1>
+                <p>Техніка, повний екіп та кращі локації України в одному місці.</p>
+                <a href="#skills" class="btn btn-main">Почати гайд</a>
+            </div>
+        </section>
+        <section class="section" id="skills">
+            <div class="container">
+                <h2><span>01.</span> Техніка їзди</h2>
+                <div class="grid">
+                    <article class="card">
+                        <h3>Атакуюча стійка</h3>
+                        <p>Тіло зміщене вперед, лікті розведені вгору («крила»). Це дає максимальний контроль над переднім колесом.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Баланс</h3>
+                        <p>Стискай мотоцикл колінами. Руки мають бути розслабленими — вони лише для керування.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Перешкоди</h3>
+                        <p>Стиснення підвіски перед перешкодою, різкий газ і зміщення ваги назад для "стрибка".</p>
+                    </article>
+                    <article class="card">
+                        <h3>Гальмування</h3>
+                        <p>70% зусилля на переднє гальмо. Заднє — для стабілізації або закидання хвоста в повороті.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 3. ЕКІПІРУВАННЯ (ПОВНЕ) -->
-    <section class="page-section" id="gear">
-        <div class="container">
-            <h2><span>02.</span> Повний Екіп</h2>
-            <div class="gear-container">
-                <div class="gear-item">
-                    <h3>Захист голови</h3>
-                    <ul>
-                        <li>Шолом з ECE 22.06</li>
-                        <li>Маска з лінзою-хамелеоном</li>
-                        <li>Запасні відривні плівки</li>
-                    </ul>
-                </div>
-                <div class="gear-item">
-                    <h3>Захист суглобів</h3>
-                    <ul>
-                        <li>Шарнірні брейси на коліна</li>
-                        <li>Налокітники з піною 3DF</li>
-                        <li>Мотоботи (рівень Cross/Enduro)</li>
-                    </ul>
-                </div>
-                <div class="gear-item">
-                    <h3>Тіло та органи</h3>
-                    <ul>
-                        <li>Панцир (Hard Shell)</li>
-                        <li>Захист шиї (Leatt Brace)</li>
-                        <li>Пояс для нирок</li>
-                    </ul>
-                </div>
-                <div class="gear-item">
-                    <h3>Аксесуари</h3>
-                    <ul>
-                        <li>Рюкзак-гідратор (2л+)</li>
-                        <li>Ендуро-сумка на крило</li>
-                        <li>Рукавички з посиленою долонею</li>
-                    </ul>
+        </section>
+        <section class="section section-dark-bg" id="gear">
+            <div class="container">
+                <h2><span>02.</span> Повний Екіп</h2>
+                <div class="grid">
+                    <article class="card card-yellow">
+                        <h3>Голова</h3>
+                        <ul>
+                            <li>Шолом з сертифікатом ECE 22.06</li>
+                            <li>Маска з лінзою-хамелеоном</li>
+                            <li>Запасні відривні плівки</li>
+                        </ul>
+                    </article>
+                    <article class="card card-yellow">
+                        <h3>Суглоби</h3>
+                        <ul>
+                            <li>Шарнірні брейси на коліна</li>
+                            <li>Налокітники з піною 3DF</li>
+                            <li>Професійні мотоботи (Cross/Enduro)</li>
+                        </ul>
+                    </article>
+                    <article class="card card-yellow">
+                        <h3>Тіло</h3>
+                        <ul>
+                            <li>Панцир (Hard Shell)</li>
+                            <li>Захист шиї (Leatt Brace)</li>
+                            <li>Пояс для нирок</li>
+                        </ul>
+                    </article>
+                    <article class="card card-yellow">
+                        <h3>Аксесуари</h3>
+                        <ul>
+                            <li>Рюкзак-гідратор (2л+)</li>
+                            <li>Сумка на крило (інструменти)</li>
+                            <li>Рукавички з посиленою долонею</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 4. ЯЛИНКА ТА РОЖІВКА -->
-    <section class="page-section" id="locations">
-        <div class="container">
-            <h2><span>03.</span> Локації</h2>
-            <div class="location-card">
-                <h3 style="color: #e74c3c;">Ялинка & Рожівка</h3>
-                <p><b>Ялинка:</b> Швидкісні піщані траси, де ти навчишся тримати стабільний газ.</p>
-                <p><b>Рожівка:</b> Технічні яри та хард-ендуро підйоми, де перевіряється твоя витривалість.</p>
+        <section class="section" id="locations">
+            <div class="container">
+                <h2><span>03.</span> Кращі Локації</h2>
+                <div class="location-box">
+                    <h3 class="location-title">Ялинка & Рожівка</h3>
+                    <p><b>Ялинка:</b> Швидкісні піщані траси, де ти навчишся тримати стабільний газ у піску.</p>
+                    <p><b>Рожівка:</b> Технічні яри та хард-ендуро підйоми, де перевіряється твоя витривалість та нерви.</p>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 5. ЧЕК-ЛИСТ (ПОВЕРНУТО ТА ПОКРАЩЕНО) -->
-    <section class="page-section" id="check">
-        <div class="container">
-            <h2><span>04.</span> Чек-лист виїзду</h2>
-            <div class="check-box">
-                <label class="check-item"><input type="checkbox"> Перевірити рівень мастила в двигуні</label>
-                <label class="check-item"><input type="checkbox"> Помити та змастити повітряний фільтр</label>
-                <label class="check-item"><input type="checkbox"> Перевірити натяжку спиць колеса</label>
-                <label class="check-item"><input type="checkbox"> Тиск у колесах: 0.8 бар (ліс), 0.5 бар (хард)</label>
-                <label class="check-item"><input type="checkbox"> Запасні важелі (зчеплення/гальма) у рюкзаку</label>
-                <label class="check-item"><input type="checkbox"> Перевірити гальмівні колодки</label>
-                <label class="check-item"><input type="checkbox"> Повний бак палива + запас (якщо далеко)</label>
-                <label class="check-item"><input type="checkbox"> Заряджений павербанк та ліхтарик</label>
+        </section>
+        <section class="section section-darker-bg" id="bikes">
+            <div class="container">
+                <h2><span>04.</span> Вибір мотоцикла</h2>
+                <div class="grid">
+                    <article class="card bike-card">
+                        <span class="bike-tag">Soft Enduro</span>
+                        <h3>Honda CRF300L</h3>
+                        <p>Надійний, пробачає помилки. Ідеально для лісових прогулянок та перших кроків.</p>
+                    </article>
+                    <article class="card bike-card">
+                        <span class="bike-tag">Hard Enduro</span>
+                        <h3>KTM 300 EXC</h3>
+                        <p>Еталон класу. Потужний 2-тактний двигун для самих вертикальних стін.</p>
+                    </article>
+                    <article class="card bike-card">
+                        <span class="bike-tag">Budget Hero</span>
+                        <h3>Geon Terrax / Kovi</h3>
+                        <p>Кращий вибір за свої гроші для старту в українських реаліях.</p>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+        <section class="section" id="check">
+            <div class="container">
+                <h2><span>05.</span> Чек-лист виїзду</h2>
+                <div class="check-box">
+                    <label class="check-item"><input type="checkbox"> Рівень мастила та антифризу</label>
+                    <label class="check-item"><input type="checkbox"> Чистота повітряного фільтра</label>
+                    <label class="check-item"><input type="checkbox"> Натяжка спиць та ланцюга</label>
+                    <label class="check-item"><input type="checkbox"> Тиск: 0.8 бар (ліс), 0.5 бар (хард)</label>
+                    <label class="check-item"><input type="checkbox"> Запасні важелі у рюкзаку</label>
+                    <label class="check-item"><input type="checkbox"> Повний бак палива</label>
+                    <label class="check-item"><input type="checkbox"> Павербанк та ліхтарик</label>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="join">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Готовий до <span class="cta-accent">першого прохвату?</span></h2>
+                    <p>Залиш номер, і we додамо тебе до чату райдерів Київщини.</p>
+                    <form onsubmit="event.preventDefault(); alert('Вітаємо в банді! Скоро напишемо.');">
+                        <input type="text" placeholder="Ім'я" required>
+                        <input type="tel" placeholder="+380..." required>
+                        <button type="submit" class="btn btn-dark">Хочу в банду</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
     <a href="#home" class="btn-up">↑</a>
-
-    <footer style="padding: 40px; text-align: center; background: #050510;">
-        <p>&copy; 2026 Enduro Drive Ukraine. Готуйся ретельно — їдь безпечно.</p>
+    <footer>
+        <p>&copy; 2026 Enduro Drive Ukraine. Бруд миється — емоції залишаються.</p>
     </footer>
-
     <script>
         function toggleMenu() {
             const menu = document.getElementById('navMenu');
-            menu.classList.toggle('active');
             const b1 = document.getElementById('b1'), b2 = document.getElementById('b2'), b3 = document.getElementById('b3');
+            menu.classList.toggle('active');
             if(menu.classList.contains('active')) {
-                b1.style.transform = "rotate(-45deg) translate(-9px, 6px)";
+                b1.style.transform = "rotate(-45deg)  translate(-9px, 6px)";
                 b2.style.opacity = "0";
                 b3.style.transform = "rotate(45deg) translate(-8px, -8px)";
             } else {
